@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" data-color="teal" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SalamHub — Every Question Deserves an Answer</title>
+  <meta name="description"
+    content="Discover Islam through honest answers to your hardest questions. Real debates, anonymous Q&A, and personalized guidance. No pressure, no judgment." />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%2300f5d4' stroke-width='2'/%3E%3Cpath d='M16.5 7.5C15.12 6.12 13.16 5.5 11 6.08 8.42 6.75 6.75 8.42 6.08 11 5.5 13.16 6.12 15.12 7.5 16.5' stroke='%2300f5d4' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='14' cy='9' r='1.5' fill='%2300f5d4'/%3E%3C/svg%3E" />
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SalamHub — Every Question Deserves an Answer" />
+  <meta property="og:description"
+    content="Discover Islam through honest answers to your hardest questions. Real debates, anonymous Q&A, and personalized guidance." />
+  <meta property="og:url" content="https://ahmedellansary.github.io/SalamHub/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-mark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              fill="currentColor" opacity="0.4" />
+            <path d="M16.5 7.5C15.12 6.12 13.16 5.5 11 6.08 8.42 6.75 6.75 8.42 6.08 11 5.5 13.16 6.12 15.12 7.5 16.5"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <circle cx="14" cy="9" r="1.5" fill="currentColor" />
+          </svg>
+        </div>
+        <span class="logo-text">Salam<span class="logo-accent">Hub</span></span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#questions-section" class="nav-link" data-i18n="nav.path">My Path</a>
+        <a href="#debates" class="nav-link" data-i18n="nav.debates">Debates</a>
+        <a href="#myths" class="nav-link" data-i18n="nav.myths">Myths Busted</a>
+        <a href="#ask" class="nav-link" data-i18n="nav.ask">Ask Anonymously</a>
+        <a href="#convinced" class="nav-link" data-i18n="nav.convinced">New Muslim</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Language -->
+        <div class="lang-wrap" id="langWrap">
+          <button class="lang-trigger" id="langTrigger">
+            <span id="langFlag">🌐</span>
+            <span id="langCode">EN</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="lang-drop" id="langDrop">
+            <button class="lang-opt active" data-lang="en">🇺🇸 English</button>
+            <button class="lang-opt" data-lang="ar">🇸🇦 العربية</button>
+            <button class="lang-opt" data-lang="fr">🇫🇷 Français</button>
+            <button class="lang-opt" data-lang="es">🇪🇸 Español</button>
+            <button class="lang-opt" data-lang="tr">🇹🇷 Türkçe</button>
+            <button class="lang-opt" data-lang="de">🇩🇪 Deutsch</button>
+            <button class="lang-opt" data-lang="id">🇮🇩 Bahasa</button>
+            <button class="lang-opt" data-lang="ur">🇵🇰 اردو</button>
+          </div>
+        </div>
+        <!-- Color Palette -->
+        <div class="palette-toggle">
+          <button class="pal-btn active" data-color="teal" title="Neon Teal"></button>
+          <button class="pal-btn" data-color="gold" title="Bridge Gold"></button>
+        </div>
+        <!-- Mobile menu -->
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO / ONBOARDING ── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid-overlay"></div>
+      <div class="glow g1"></div>
+      <div class="glow g2"></div>
+      <div class="glow g3"></div>
+    </div>
+    <div class="hero-container">
+      <!-- LEFT: Title, Description & Stats -->
+      <div class="hero-left">
+        <div class="hero-eyebrow" data-i18n="hero.eyebrow">No pressure &nbsp;·&nbsp; No judgment &nbsp;·&nbsp; Just
+          truth</div>
+        <h1 class="hero-h1">
+          <span data-i18n="hero.h1a">Every Question</span><br>
+          <span class="gradient-text" data-i18n="hero.h1b">Deserves an Answer</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero.sub">You have questions about Islam. We have honest, direct answers. Tell us
+          who you are — and we'll build your personal path.</p>
+
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-n">1.8B</span><span class="stat-l" data-i18n="stat.muslims">Muslims
+              worldwide</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-n">50+</span><span class="stat-l" data-i18n="stat.langs">Languages</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-n">24h</span><span class="stat-l" data-i18n="stat.reply">Scholar reply
+              time</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Start with your background Selector Panel -->
+      <div class="hero-right">
+        <div class="bg-selector-panel" id="bgSelector">
+          <div class="bsp-header">
+            <span class="bsp-badge" data-i18n="hero.selector.badge">YOUR STARTING POINT</span>
+            <h3 class="bsp-title" data-i18n="hero.selector">Start with your background:</h3>
+            <p class="bsp-sub" data-i18n="hero.selector.sub">Select your background to tailor the answers to your
+              perspective:</p>
+          </div>
+          <div class="bg-cards">
+            <button class="bg-card" data-bg="atheist">
+              <span class="bg-icon">🔬</span>
+              <div class="bg-info">
+                <span class="bg-name" data-i18n="bg.atheist">Atheist / Agnostic</span>
+                <span class="bg-hint" data-i18n="bg.atheist.hint">Logic, science & evidence</span>
+              </div>
+              <span class="bg-arrow">→</span>
+            </button>
+            <button class="bg-card" data-bg="christian">
+              <span class="bg-icon">✝️</span>
+              <div class="bg-info">
+                <span class="bg-name" data-i18n="bg.christian">Christian</span>
+                <span class="bg-hint" data-i18n="bg.christian.hint">Bible, Jesus & Trinity</span>
+              </div>
+              <span class="bg-arrow">→</span>
+            </button>
+            <button class="bg-card" data-bg="jewish">
+              <span class="bg-icon">✡️</span>
+              <div class="bg-info">
+                <span class="bg-name" data-i18n="bg.jewish">Jewish</span>
+                <span class="bg-hint" data-i18n="bg.jewish.hint">Torah, prophets & covenant</span>
+              </div>
+              <span class="bg-arrow">→</span>
+            </button>
+            <button class="bg-card" data-bg="other">
+              <span class="bg-icon">🌍</span>
+              <div class="bg-info">
+                <span class="bg-name" data-i18n="bg.other">Just Curious</span>
+                <span class="bg-hint" data-i18n="bg.other.hint">Start from the beginning</span>
+              </div>
+              <span class="bg-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PERSONALIZED QUESTIONS ── -->
+  <section class="questions-section" id="questions-section" style="display:none">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge" id="pathBadge"></span>
+        <h2 class="section-title" data-i18n="q.title">Questions Built for You</h2>
+        <p class="section-sub" data-i18n="q.sub">Real questions people like you ask. Answered directly, without
+          sugarcoating.</p>
+      </div>
+      <div class="q-accordion" id="qAccordion">
+        <!-- JS populated -->
+      </div>
+      <div class="q-footer">
+        <button class="btn-ghost" id="changeBgBtn" data-i18n="q.change">← Choose different background</button>
+        <a href="#ask" class="btn-primary" data-i18n="q.more">Have another question? →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DEBATES ARENA ── -->
+  <section class="debates-section" id="debates">
+    <div class="container debates-wide-container">
+      <div class="section-head">
+        <span class="section-badge" data-i18n="badge.debates">🎯 Debate Arena</span>
+        <h2 class="section-title" data-i18n="debates.title">Watch Real Debates</h2>
+        <p class="section-sub" data-i18n="debates.sub">Muslims vs. atheists, Christians, skeptics. Ready to play on
+          1-click.</p>
+      </div>
+
+      <!-- Categories Filter Row: All alongside the other categories -->
+      <div class="filter-row debates-category-row" id="debatesFilter">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter.all">All</button>
+        <button class="filter-btn" data-filter="mo3az" data-i18n="filter.mo3az">Muadh Aliyan</button>
+        <button class="filter-btn" data-filter="deedat" data-i18n="filter.deedat">Ahmed Deedat</button>
+        <button class="filter-btn" data-filter="zakir" data-i18n="filter.zakir">Dr. Zakir Naik</button>
+        <button class="filter-btn" data-filter="dawoud" data-i18n="filter.dawoud">Mahmoud Dawoud</button>
+        <button class="filter-btn" data-filter="khairallah" data-i18n="filter.khairallah">Zain Khairallah</button>
+        <button class="filter-btn" data-filter="christian" data-i18n="bg.christian">Christian</button>
+        <button class="filter-btn" data-filter="atheist" data-i18n="bg.atheist">Atheist</button>
+        <button class="filter-btn" data-filter="science" data-i18n="filter.science">Science</button>
+        <button class="filter-btn" data-filter="jewish" data-i18n="bg.jewish">Jewish</button>
+      </div>
+
+      <!-- Main Debates Grid: Full original size (2 rows x 3 columns = 6 cards) -->
+      <div class="debates-grid" id="debatesGrid">
+        <!-- JS populated: 2 rows x 3 columns -->
+      </div>
+
+      <!-- Pagination (Arrows: Prev, Next & Page Numbers) -->
+      <div class="debates-pagination" id="debatesPagination">
+        <!-- JS populated pagination (Prev / Next & page numbers) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MYTH BUSTERS ── -->
+  <section class="myths-section" id="myths">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge" data-i18n="badge.myths">⚡ Myth Busters</span>
+        <h2 class="section-title" data-i18n="myths.title">The Hardest Questions<br>Get Straight Answers</h2>
+        <p class="section-sub" data-i18n="myths.sub">No dodging. No deflecting. Just facts and evidence.</p>
+      </div>
+      <div class="filter-row" id="mythsFilter">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter.all">All</button>
+        <button class="filter-btn" data-filter="women" data-i18n="filter.women">Women</button>
+        <button class="filter-btn" data-filter="violence" data-i18n="filter.violence">Violence</button>
+        <button class="filter-btn" data-filter="history" data-i18n="filter.history">History</button>
+        <button class="filter-btn" data-filter="science" data-i18n="filter.science">Science</button>
+        <button class="filter-btn" data-filter="prophet" data-i18n="filter.prophet">Prophet</button>
+      </div>
+      <div class="myths-grid" id="mythsGrid">
+        <!-- JS populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ASK ANONYMOUSLY ── -->
+  <section class="ask-section" id="ask">
+    <div class="container">
+      <div class="ask-card">
+        <div class="ask-left">
+          <span class="section-badge" data-i18n="badge.anon">🔒 100% Anonymous</span>
+          <h2 class="section-title" data-i18n="ask.title">Have a Question<br>You're Afraid to Ask?</h2>
+          <p class="section-sub" data-i18n="ask.sub">No email. No name. No judgment. Goes directly to a scholar who will
+            answer honestly.</p>
+          <ul class="ask-features">
+            <li><span class="af-icon">🔒</span><span data-i18n="ask.f1">Completely anonymous</span></li>
+            <li><span class="af-icon">⚡</span><span data-i18n="ask.f2">Answered within 24 hours</span></li>
+            <li><span class="af-icon">📚</span><span data-i18n="ask.f3">By real Islamic scholars</span></li>
+            <li><span class="af-icon">🌐</span><span data-i18n="ask.f4">In your language</span></li>
+          </ul>
+          <div class="ask-quote">
+            <blockquote data-i18n="ask.quote">«إِنَّمَا شِفَاءُ الْعِيِّ السُّؤَالُ»</blockquote>
+            <cite data-i18n="ask.cite">— رسول الله ﷺ [سنن أبي داود: 336]</cite>
+          </div>
+        </div>
+        <div class="ask-right">
+          <form class="ask-form" id="askForm">
+            <div class="form-field">
+              <label><span data-i18n="ask.label.bg">Your background</span> <span class="opt"
+                  data-i18n="ask.optional">(optional)</span></label>
+              <select id="askBackground">
+                <option value="" data-i18n="ask.opt.sel">Select your background</option>
+                <option value="atheist" data-i18n="bg.atheist">Atheist / Agnostic</option>
+                <option value="christian" data-i18n="bg.christian">Christian</option>
+                <option value="jewish" data-i18n="bg.jewish">Jewish</option>
+                <option value="other" data-i18n="bg.other">Just Curious</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label><span data-i18n="ask.label.q">Your question</span> <span class="req">*</span></label>
+              <textarea id="askQuestion" rows="5" placeholder="Type your question here... Don't hold back."
+                data-i18n="ask.placeholder" required></textarea>
+            </div>
+            <div class="form-field">
+              <label data-i18n="ask.label.lang">Answer in</label>
+              <select id="askLang">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="tr">Türkçe</option>
+                <option value="de">Deutsch</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary btn-full" data-i18n="ask.submit">Send Anonymously →</button>
+            <p class="form-note" data-i18n="ask.note">We'll publish the answer publicly (without identifying info) so
+              others can benefit too.</p>
+          </form>
+          <div class="ask-success" id="askSuccess">
+            <div class="success-check">✓</div>
+            <h3 data-i18n="ask.success.title">Question Received!</h3>
+            <p data-i18n="ask.success.body">A scholar will answer within 24 hours. Check back here soon.</p>
+            <button class="btn-ghost" id="askAgainBtn" data-i18n="ask.again">Ask another question</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── I'M CONVINCED — WHAT'S NEXT ── -->
+  <section class="convinced-section" id="convinced">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge" data-i18n="badge.convinced">🌙 New to Islam</span>
+        <h2 class="section-title" data-i18n="convinced.title">Convinced?<br>Here's Your First Step</h2>
+        <p class="section-sub" data-i18n="convinced.sub">You don't need to know everything. You just need to begin. One
+          step at a time.</p>
+      </div>
+      <div class="steps-timeline" id="stepsTimeline">
+        <!-- JS populated -->
+      </div>
+      <div class="convinced-cta">
+        <p data-i18n="convinced.ctaText">Ready to start? A scholar is here to guide you.</p>
+        <a href="#ask" class="btn-primary btn-large" data-i18n="convinced.cta">Talk to a Scholar Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SCHOLARS ── -->
+  <section class="scholars-section" id="scholars">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-badge" data-i18n="badge.scholars">👨‍🏫 Live Support</span>
+        <h2 class="section-title" data-i18n="scholars.title">Talk to a Real Scholar</h2>
+        <p class="section-sub" data-i18n="scholars.sub">Not chatbots. Real scholars. Available for live conversations
+          and questions.</p>
+      </div>
+      <div class="scholars-grid" id="scholarsGrid">
+        <!-- JS populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="logo-mark">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                  fill="currentColor" opacity="0.4" />
+                <path
+                  d="M16.5 7.5C15.12 6.12 13.16 5.5 11 6.08 8.42 6.75 6.75 8.42 6.08 11 5.5 13.16 6.12 15.12 7.5 16.5"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <circle cx="14" cy="9" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <span class="logo-text">Salam<span class="logo-accent">Hub</span></span>
+          </a>
+          <p class="footer-tagline" data-i18n="footer.tagline">Every question deserves an honest answer.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.explore">Explore</h4>
+          <a href="#questions-section" data-i18n="nav.path">My Path</a>
+          <a href="#debates" data-i18n="nav.debates">Debates</a>
+          <a href="#myths" data-i18n="nav.myths">Myths Busted</a>
+          <a href="#ask" data-i18n="nav.ask">Ask Anonymously</a>
+          <a href="#convinced" data-i18n="nav.convinced">New Muslim Guide</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.paths">Your Path</h4>
+          <a href="#" data-bg="atheist" class="path-link" data-i18n="bg.atheist">Atheist / Agnostic</a>
+          <a href="#" data-bg="christian" class="path-link" data-i18n="bg.christian">Christian</a>
+          <a href="#" data-bg="jewish" class="path-link" data-i18n="bg.jewish">Jewish</a>
+          <a href="#" data-bg="other" class="path-link" data-i18n="bg.other">Just Curious</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.connect">Connect</h4>
+          <a href="#scholars" data-i18n="footer.scholars">Talk to a Scholar</a>
+          <a href="#ask" data-i18n="footer.anon">Anonymous Q&amp;A</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SalamHub &nbsp;·&nbsp; <span data-i18n="footer.rights">Built for truth-seekers, with ❤️</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── MODAL (CONTENT) ── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-inner" id="modalInner"></div>
+    </div>
+  </div>
+
+  <!-- ── CINEMA VIDEO MODAL (1-CLICK PLAYER) ── -->
+  <div class="video-modal-overlay" id="videoModalOverlay">
+    <div class="video-modal-box" id="videoModalBox">
+      <button class="video-modal-close" id="videoModalClose" aria-label="Close video">✕</button>
+      <div class="video-modal-player-wrap" id="videoModalPlayerWrap">
+        <!-- iframe injected on play and removed on close to stop playback -->
+      </div>
+      <div class="video-modal-info">
+        <div class="vmi-header">
+          <span class="vmi-badge" id="videoModalBadge">🎯 DEBATE ARENA</span>
+          <span class="vmi-duration" id="videoModalDuration">2:14:09</span>
+        </div>
+        <h3 class="vmi-title" id="videoModalTitle">Video Title</h3>
+        <p class="vmi-speakers" id="videoModalSpeakers">Speakers Info</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
