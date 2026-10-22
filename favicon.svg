@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="salamGrad" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="100%" stop-color="#00bbf9" />
+    </linearGradient>
+  </defs>
+  <!-- Stylized Crescent of Peace & Reflection -->
+  <path d="M16 3C8.82 3 3 8.82 3 16s5.82 13 13 13c4.14 0 7.86-1.92 10.28-4.93a1 1 0 0 0-.67-1.57c-6.22-1.12-10.89-6.52-10.89-13 0-2.52.71-4.87 1.94-6.87a1 1 0 0 0-.85-1.55C18.12 3.05 17.07 3 16 3z" fill="url(#salamGrad)" opacity="0.95" />
+  <!-- Central Hub Compass & Light Beacon -->
+  <path d="M23 6L24.2 10.4C24.4 11.1 25 11.7 25.7 11.9L30.1 13.1L25.7 14.3C25 14.5 24.4 15.1 24.2 15.8L23 20.2L21.8 15.8C21.6 15.1 21 14.5 20.3 14.3L15.9 13.1L20.3 11.9C21 11.7 21.6 11.1 21.8 10.4L23 6z" fill="#00f5d4" />
+  <circle cx="23" cy="13.1" r="1.6" fill="#ffffff" />
+</svg>
